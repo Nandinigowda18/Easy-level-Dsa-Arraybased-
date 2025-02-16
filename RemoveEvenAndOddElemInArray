@@ -1,0 +1,54 @@
+package javaproject;
+import java.util.*;
+
+public class RemoveEven {
+	
+	public static int[] removeE(int[] arr) { //Note //returning an arr requires int[] here
+		int count = 0;
+		
+		
+		for(int i=0;i <arr.length; i++) {
+// NOTE::to remove even you have to pick odd element and store it in the new arr and print that new arr
+//and vise-versa for odd element  remove question	
+			
+			if (arr[i] % 2 != 0) {
+				count++;
+				
+			}
+		}
+			
+		int idx=0;//this is working inside the same method removeE
+		
+		int[] newarr = new int[count];
+		
+		for(int i=0;i<arr.length;i++) { 
+			
+			if (arr[i] % 2 != 0) {
+				
+				newarr[idx] = arr[i];  
+				
+				idx++; //note:idx represents the position where we insert elements in newarr, position shd be incremented 
+			}
+		}
+				
+     return newarr;
+			
+	}
+		
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+		
+		int n=sc.nextInt();
+		int[] arr = new int[n];
+		
+		for(int i=0;i<n;i++) {
+			arr[i]= sc.nextInt();
+		}
+		
+		// NOTE::Arrays.toString() method to print the array properly
+		System.out.println(Arrays.toString(removeE(arr)));
+			
+	}
+
+}
