@@ -1,0 +1,38 @@
+public class CountFrequency {
+	
+	public static void freq(int[] arr) {
+		
+		HashMap <Integer, Integer> map = new HashMap<>();
+		
+		for(int i=0;i<arr.length;i++){
+			
+			int num= arr[i];
+			
+			//only K caps in conatinsKey
+		if(map.containsKey(num)) {
+			map.put(num, map.get(num)+1);
+			
+		}else {
+			map.put(num, 1);
+		}
+			
+	}//done with for loop and logic part
+		
+		// we need entryset 
+		//Map.entry m-caps ,map.entryset- m small
+		
+		for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			System.out.println(entry.getKey() +" "+entry.getValue());
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int arr[]= {10,5,10,15,10,5};
+		freq(arr);
+
+	}
+
+}
