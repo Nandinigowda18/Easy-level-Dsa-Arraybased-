@@ -1,0 +1,32 @@
+package javaproject;
+
+public class Tcs6 {
+	
+	public static String longestword(String str ) {
+		//longest word in a sentence 
+		
+		String[] arr =str.split(" ");
+		String longest = "";
+		
+		
+		for(String word : arr) {
+			
+			
+			if(word.length() > longest.length()) {
+				longest = word ;
+				
+			}
+		}
+		return longest;
+		
+	}
+
+	
+	public static void main (String[] args ) {
+		
+		String str=" hello my name is nandini";
+		System.out.println(longestword(str));
+		
+		
+	}
+}
