@@ -1,0 +1,47 @@
+package javaproject;
+import java.util.*;
+
+public class Tcs8 {
+	
+	public static int majority(int[] arr) {
+		HashMap<Integer, Integer> map = new HashMap<>();
+		
+		for(int i=0;i<arr.length;i++) {
+			
+			int num = arr[i];
+			if(map.containsKey(num)) {
+				map.put(num,  map.get(num)+1);
+				
+			}else {
+				map.put(num, 1);
+			}
+			
+		}
+		int highest =0;
+		
+		for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			
+			if(entry.getValue() > highest) {
+				highest = entry.getKey();
+			}	
+		}
+		
+		return highest;
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc= new Scanner(System.in);
+		int n =sc.nextInt();
+		int arr[] = new int[n];
+		
+		for(int i=0;i<arr.length;i++) {
+			arr[i]= sc.nextInt();
+			
+		}
+		System.out.println(majority(arr));
+		
+	}
+
+}
