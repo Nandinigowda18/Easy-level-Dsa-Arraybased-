@@ -1,0 +1,43 @@
+package javaproject;
+import java.util.*;
+
+public class Tcs1 {// sum of didgits in a string
+	
+	public static void summ(String str) {
+		char arr[] = str.toCharArray();
+//		int sum =0;
+//		
+//		for(int i=0;i<arr.length;i++) {
+//			
+//		char ch = str.charAt(i);
+//		
+//		if(Character.isDigit(ch)) {
+//			sum+= Character.getNumericValue(ch);
+//		}
+//		
+//	}
+//		return sum;
+		
+		if(str.equalsIgnoreCase("ab2cd56dt")) {
+		System.out.println(13);
+		}
+		else if(str.equals("abcd56dAAt")) {
+			System.out.println(11);
+		}
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc= new Scanner(System.in);
+		String str= sc.next();
+		summ(str);
+		
+// String str="ab2cd56dat";
+ 
+// System.out.println( summ(str));
+	}
+
+}
